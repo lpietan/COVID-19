@@ -20,10 +20,8 @@ fail = 0.8*len(df_train.columns)
 remove = False
 j = ','
 # dataset file
-#with open('/Shared/darbro-cytogenetics/Lucas/covid_joint_jobs/covid_ML_dataset_byline.csv', "r") as f:
 with open(sys.argv[3], "r") as f:
         lines = f.readlines()
-#with open('/Shared/darbro-cytogenetics/Lucas/covid_joint_jobs/covid_ML_dataset.filNoCall80.csv', "w") as f:
 with open(sys.argv[4], "w") as f:
         for line in lines:
                 lineN = line.rstrip('\n')
@@ -48,10 +46,8 @@ with open(sys.argv[4], "w") as f:
 
 ## Zero Variance
 # dataset file
-#with open("/Shared/darbro-cytogenetics/Lucas/covid_joint_jobs/covid_ML_dataset.filNoCall80.csv", "r") as f:
 with open(sys.argv[4], "r") as f:
         lines = f.readlines()
-#with open("/Shared/darbro-cytogenetics/Lucas/covid_joint_jobs/covid_ML_dataset.filNoCall80.zvFil.csv", "w") as f:
 with open(sys.argv[5], "w") as f:
         for line in lines:
                 lineN = line.rstrip('\n')
